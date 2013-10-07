@@ -1,0 +1,14 @@
+h1 Remember List
+form(action="/save", method="post")
+  p
+    label Enter a item to add to list  
+    input(type='text',placeholder='new todo', name='todo-text')
+  p
+    input(type='submit', value='Save')
+ul
+  each todo in todos
+    li #{todo.text} 
+      a(href="/del/#{todo.id}") del
+
+
+
